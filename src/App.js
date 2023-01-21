@@ -4,6 +4,9 @@ function App() {
   return (
     <div className="App">
       <h1 className="text-[100px]">hello world!</h1>
+      <h1 className="text-[100px]">hello world!</h1>
+      <h1 className="text-[100px]">hello world!</h1>
+      <h1 className="text-[100px]">hello world!</h1>
     </div>
   );
 }
