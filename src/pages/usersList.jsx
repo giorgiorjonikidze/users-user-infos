@@ -22,9 +22,9 @@ const UsersList = () => {
   }, []);
 
   const openUserHandler = (id) => {
-    navigate("/user-info/" + id, { state: id})
-    console.log(id)
-  }
+    navigate("/user-info/" + id, { state: { userData: fetchedData[id] } });
+    console.log(id);
+  };
 
   const usersListing = () => {
     return fetchedData.map((user, index) => (
@@ -44,11 +44,11 @@ const UsersList = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex  justify-center gap-[50px] mt-[100px]">
+    <div className="w-screen flex  justify-center gap-[50px] mt-[100px] mb-[100px]">
       <button
         onClick={toggleFriends}
         className="border-[2px] border-solid border-[#000000] rounded-[20px] box-border px-[20px] h-fit font-bold text-[20px] border-opacity-40"
-        style={showFriends ? {color: "#06b6d4"} : { color: "#000000" } }
+        style={showFriends ? { color: "#06b6d4" } : { color: "#000000" }}
       >
         Friends
       </button>
